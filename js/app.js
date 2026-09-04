@@ -155,7 +155,7 @@ async function saveSolicitud(e) {
   if (editingId) data.id = editingId;
 
   try {
-    const response = await fetch(editingId ? 'api/edit_request.php' : 'api/create_request.php', {
+    const response = await fetch(editingId ? 'api/update.php' : 'api/create.php', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(data)
@@ -191,7 +191,7 @@ async function deleteSolicitud(id) {
   if (!confirm('¿Eliminar esta solicitud permanentemente?')) return;
 
   try {
-    const response = await fetch('api/delete_request.php', {
+    const response = await fetch('api/delete.php', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({id})
@@ -207,7 +207,7 @@ async function deleteSolicitud(id) {
 
 async function cargarSolicitudes() {
   try {
-    const response = await fetch('api/list_requests.php');
+    const response = await fetch('api/list.php');
     const result = await response.json();
     if (!response.ok || !result.success) throw new Error(result.message || 'No se pudieron cargar las solicitudes.');
     solicitudes = Array.isArray(result.data) ? result.data : result;
