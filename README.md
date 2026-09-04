@@ -2,15 +2,9 @@
 
 INCREEDU is a student request management dashboard designed to help educational institutions organize, track, and manage student applications efficiently.
 
-## Preview
-
 ### Dashboard
 
 <img width="1335" height="662" alt="INCREEDU dashboard" src="https://github.com/user-attachments/assets/a0a58d1e-a53d-4cbe-ae8a-07a99b777768" />
-
-### Login Panel
-
-<img width="925" height="586" alt="INCREEDU login panel" src="https://github.com/user-attachments/assets/e6f32b1b-3205-47be-9a8b-447ae706538c" />
 
 ## Features
 
